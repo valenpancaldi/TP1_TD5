@@ -1,4 +1,5 @@
 #include "greedy_solver.h"
+#include "taxi_assignment_instance.h"
 
 
 GreedySolver::GreedySolver() {}
@@ -14,8 +15,11 @@ void GreedySolver::setInstance(TaxiAssignmentInstance &instance) {
     this->_instance = instance;
 }
 
-void GreedySolver::solve() {
+void GreedySolver::solve(TaxiAssignmentInstance &instance) {
+    auto matriz = _instance.dist;
+    for (i = 0, i < , ++i){
 
+    }
 
 }
 
