@@ -15,7 +15,26 @@ void GreedySolver::setInstance(TaxiAssignmentInstance &instance) {
 }
 
 void GreedySolver::solve() {
+    auto start = std::chrono::high_resolution_clock::now();
+    auto matriz = _instance.dist;
+    int n = _instance.n;
+    //auto solucion = TaxiAssignmentSolution(n);
+    for (int j = 0; j < n; j++){
+        int min = 99999;
+        int fila;
+        for (int i = 0; i < n ; i++){
+            if ((matriz[i][j] < min) && (_solution.isTaxiAssigned(i) == false)){
+                min = matriz[i][j];
+                fila = i;
+            }
+        }
+        _solution.assign(fila,j);
 
+        // falta tiempo de resolucion
+    }
+    auto end = std::chrono::high_resolution_clock::now();
+    auto tiempo_transcurrido = end - start;
+    // _solution_time = tiempo_transcurrido;
 
 }
 
